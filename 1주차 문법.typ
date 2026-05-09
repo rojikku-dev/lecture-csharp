@@ -1,4 +1,5 @@
 #set text(font: ("NanumGothic", "Malgun Gothic"))
+#show raw: set text(font: ("Consolas", "SF Mono", "NanumGothic", "Malgun Gothic"))
 
 #import "@preview/diatypst:0.9.1": *
 #show: slides.with(
@@ -52,6 +53,21 @@
   bool c4 = a ^ b;   // 배타적 논리합
   ```
 
+== 배열
+
+- 고정된 갯수의 동일한 타입의 여러 값들이 저장되어 있는 형태를 나타낼 때 사용하는 자료형
+
+/ 사용 예:
+  ```cs
+  string[] name = new string[3];  // 크기가 3인 빈 문자열 배열
+  name[0] = "Alice";
+  name[1] = "Bob";
+  name[2] = "Carol";
+  
+  int[] ages = [12, 9, 15];      // 미리 초기화 된 배열
+  Console.WriteLine($"{name[0]}의 나이: {ages[0]}");
+  ```
+
 == 문자열
 
 - 텍스트를 나타낼 때 사용하는 자료형
@@ -76,7 +92,7 @@
   li1.Add(3);  // li1 에 3을 가장 뒤에 추가
   li1.Add(4);  // li1 에 4를 가장 뒤에 추가
   li1.ForEach(Console.WriteLine);  // 각 원소를 한 줄 씩 출력
-
+  
   List<int> li2 = [2, 4, 8];
   ```
 
@@ -111,7 +127,7 @@
   ```cs
   string name = "Alice";   // name 변수 선언
   int age = 12;            // age 변수 선언
-
+  
   age = age + 1;           // age에 age + 1의 값을 할당
   Console.WriteLine(age);  // Out: 13 
   ```
